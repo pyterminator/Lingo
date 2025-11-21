@@ -1,7 +1,7 @@
 {
   "1": ["a", "[ei]", ["apple", "age"]],
   "2": ["b", "[bi]", ["banana", "boat"]],
-  "3": ["c", "[si]", ["city", "cat"]],
+  "3": ["c", "[si]", ["cat", "city"]],
   "4": ["d", "[di]", ["dog", "door"]],
   "5": ["e", "[i:]", ["elephant", "egg"]],
   "6": ["f", "[ef]", ["fish", "frog"]],
