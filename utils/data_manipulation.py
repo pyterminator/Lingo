@@ -3,8 +3,11 @@ from config import BASE_DIR
 from models.user import User
 from datetime import datetime
 from typing import Optional, List
+from string import ascii_lowercase
+from random import choice, shuffle
 from models.greetings import Phrase
-from random import choice
+from models.games import ScrambleGame
+from telegram import InlineKeyboardButton, InlineKeyboardMarkup
 
 class UserManager:
 
@@ -120,3 +123,62 @@ class GreetingsManager:
         if not phrases: return None
         return choice(phrases)
         
+
+class QuizManager:
+
+    @staticmethod
+    def _load() -> List[ScrambleGame]:
+        try:
+            with open(f"{BASE_DIR}/data/scramble_games.json", "r", encoding="utf-8") as f:
+                raw_data = json.load(f)
+        except FileNotFoundError:
+            return []
+
+        scramble_games = [ScrambleGame(**sb) for sb in raw_data]
+        return scramble_games
+
+    @staticmethod
+    def _save(scramble_games: List[ScrambleGame]) -> None:
+        with open(f"{BASE_DIR}/data/scramble_games.json", "w", encoding="utf-8") as f:
+            json.dump(
+                [{**sg.model_dump()} for sg in scramble_games],
+                f,
+                ensure_ascii=False,
+                indent=4
+            )
+
+    @classmethod
+    def get_active_scramble_game(cls, user_id: int) -> ScrambleGame | None:
+        for game in cls._load():
+            if game.user_id == user_id and game.is_active:
+                return game
+        return None
+
+    @staticmethod
+    def create_scramble_game(user_id: int, phrase: Phrase)-> ScrambleGame:
+        games = QuizManager._load()
+
+        new_id = 1 if not games else games[-1].id + 1
+
+
+        word = phrase.en.lower()
+        letters = [ch for ch in word if ch in ascii_lowercase]
+        shuffle(letters)
+        scrambled_word = "".join(letters)
+
+        title = f"Bu hərflərdən düzgün söz düzəlt: {scrambled_word}"
+
+        new_game = ScrambleGame(
+            id=new_id,
+            user_id=user_id,
+            title=title,
+            answer="".join([ch for ch in list(phrase.en.lower()) if ch in ascii_lowercase]),
+            score=1
+        )
+
+        games.append(new_game)
+        QuizManager._save(games)
+
+        return new_game
+ 
+            
