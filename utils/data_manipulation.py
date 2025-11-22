@@ -51,6 +51,14 @@ class UserManager:
             if user.tg_id == tg_id:
                 return user
         return None
+    
+    @classmethod
+    def get_user_by_id(cls, id: int) -> Optional[User]:
+        users = cls._load()
+        for user in users:
+            if user.id == id:
+                return user
+        return None
 
     @classmethod
     def add_user(cls, data: dict) -> User:
@@ -73,6 +81,19 @@ class UserManager:
 
         for i, user in enumerate(users):
             if user.tg_id == tg_id:
+                updated = user.model_copy(update=new_data)
+                users[i] = updated
+                cls._save(users)
+                return True
+
+        return False
+    
+    @classmethod
+    def update_user_by_id(cls, id: int, new_data: dict) -> bool:
+        users = cls._load()
+
+        for i, user in enumerate(users):
+            if user.id == id:
                 updated = user.model_copy(update=new_data)
                 users[i] = updated
                 cls._save(users)
@@ -148,23 +169,32 @@ class QuizManager:
             )
 
     @classmethod
-    def get_active_scramble_game(cls, user_id: int) -> ScrambleGame | None:
-        for game in cls._load():
+    def get_active_scramble_game(cls, user_id: int, phrase: Phrase) -> ScrambleGame | None:
+        games = cls._load()
+        for game in games:
             if game.user_id == user_id and game.is_active:
                 return game
-        return None
+        return QuizManager.create_scramble_game(user_id, phrase, games)
 
     @staticmethod
-    def create_scramble_game(user_id: int, phrase: Phrase)-> ScrambleGame:
-        games = QuizManager._load()
-
+    def create_scramble_game(user_id: int, phrase: Phrase, games: List[ScrambleGame])-> ScrambleGame:
+        user = UserManager.get_user_by_id(id=user_id)
+        
+        if not user: raise Exception("Xəta oldu! User olmadan bu komanda işləmir!")
+        
+        
         new_id = 1 if not games else games[-1].id + 1
 
 
-        word = phrase.en.lower()
-        letters = [ch for ch in word if ch in ascii_lowercase]
-        shuffle(letters)
-        scrambled_word = "".join(letters)
+        while True:
+            word = phrase.en.lower()
+            letters = [ch for ch in word if ch in ascii_lowercase]
+            shuffle(letters)
+            scrambled_word = "".join(letters)
+
+            if list(scrambled_word) != [ch for ch in word if ch in ascii_lowercase]:
+                break
+
 
         title = f"Bu hərflərdən düzgün söz düzəlt: {scrambled_word}"
 
@@ -179,6 +209,12 @@ class QuizManager:
         games.append(new_game)
         QuizManager._save(games)
 
+        
+        user.active_game_id = new_game.id 
+
+        data = user.model_dump()
+        data.pop("tg_id", None) 
+        UserManager.update_user(tg_id=user.tg_id, new_data=data)
         return new_game
  
             
