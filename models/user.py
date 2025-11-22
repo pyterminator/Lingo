@@ -1,22 +1,20 @@
-from tortoise import fields, models
 
-class User(models.Model):
-    id = fields.IntField(pk=True)
-    tg_id = fields.BigIntField(unique=True)
+    # __tablename__ = "users"
 
-    username = fields.CharField(max_length=255, null=True, unique=True)
-    email = fields.CharField(max_length=255, null=True, unique=True)
+    # id = Column(Integer, primary_key=True)
+    # tg_id = Column(BigInteger, unique=True, nullable=False)
+
+    # username = Column(String(255), nullable=True)
+    # email = Column(String(255), nullable=True)
     
-    first_name = fields.CharField(max_length=255, null=True)
-    last_name = fields.CharField(max_length=255, null=True)
+    # first_name = Column(String(255), nullable=True)
+    # last_name = Column(String(255), nullable=True)
 
-    language_code = fields.CharField(max_length=10, null=True)
+    # language_code = Column(String(10), nullable=True)
 
-    is_bot = fields.BooleanField(default=False)
+    # is_bot = Column(Boolean, default=False)
     
-    level = fields.IntField(default=1)
-    score = fields.IntField(default=0)
-    created_at = fields.DatetimeField(auto_now_add=True)
-
-    class Meta:
-        table = "users"
+    # level = Column(Integer, default=1)
+    # score = Column(Integer, default=0)
+    
+    # created_at = Column(DateTime(timezone=True), server_default=func.now())
