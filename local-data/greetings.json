@@ -1,240 +1,61 @@
-{
-  "greetings": {
-    "1":{
-      "en":"Hello",
-      "az":"Salam"
-    },
-    "2":{
-      "en":"Hi",
-      "az":"Salam"
-    },
-    "3":{
-      "en":"Good morning",
-      "az":"Sabahınız xeyir"
-    },
-    "4":{
-      "en":"Good afternoon",
-      "az":"Günortanız xeyir"
-    },
-    "5":{
-      "en":"Good evening",
-      "az":"Axşamınız xeyir"
-    },
-    "6":{
-      "en":"Good night",
-      "az":"Gecən xeyir"
-    },
-    "7":{
-      "en":"Goodbye",
-      "az":"Gülə-gülə"
-    },
-    "8":{
-      "en":"Bye",
-      "az":"Sağol"
-    },
-    "9":{
-      "en":"See you later",
-      "az":"Görüşərik"
-    },
-    "10":{
-      "en":"See you tomorrow",
-      "az":"Sabah görüşərik"
-    },
-    "11":{
-      "en":"See you soon",
-      "az":"Tezliklə görüşərik"
-    },
-    "12":{
-      "en":"How are you ?",
-      "az":"Necəsən ?"
-    },
-    "13":{
-      "en":"I am fine, thank you!",
-      "az":"Yaxşıyam, təşəkkürlər!"
-    },
-    "14":{
-      "en":"I am good, thank you!",
-      "az":"Yaxşıyam, təşəkkürlər!"
-    },
-    "15":{
-      "en":"I am OK, thank you!",
-      "az":"Yaxşıyam, təşəkkürlər!"
-    },
-    "16":{
-      "en":"I am all right, thank you!",
-      "az":"Yaxşıyam, təşəkkürlər!"
-    },
-    "17":{
-      "en":"Thank you",
-      "az":"Təşəkkürlər"
-    },
-    "18":{
-      "en":"I am very good",
-      "az":"Çox yaxşıyam"
-    },
-    "19":{
-      "en":"I am not fine",
-      "az":"Yaxşı deyiləm"
-    },
-    "20":{
-      "en":"I am not good",
-      "az":"Yaxşı deyiləm"
-    },
-    "21":{
-      "en":"I am bad",
-      "az":"Pisəm"
-    },
-    "22":{
-      "en":"What about you?",
-      "az":"Sən necəsən?"
-    },
-    "23":{
-      "en":"What about yourself?",
-      "az":"Sən necəsən?"
-    },
-    "24":{
-      "en":"I am fine, too.",
-      "az":"Mən də yaxşıyam."
-    },
-    "25":{
-      "en":"I am bad, too.",
-      "az":"Mən də pisəm."
-    },
-    "26":{
-      "en":"Hi there!",
-      "az":"Salam!"
-    },
-    "27":{
-      "en":"Nice to see you!",
-      "az":"Səni görməyimə şadam!"
-    },
-    "28":{
-      "en":"Hey, what's up?",
-      "az":"Hey, necəsən?"
-    },
-    "29":{
-      "en":"How is it going?",
-      "az":"Necə gedir ?"
-    },
-    "30":{
-      "en":"What's new?",
-      "az":"Təzə nə var?"
-    },
-    "31":{
-      "en":"What have you been up to?",
-      "az":"Nə ilə məşğulsan?"
-    },
-    "32":{
-      "en":"How are you doing?",
-      "az":"Necəsən ?"
-    },
-    "33":{
-      "en":"Nice to see you again!",
-      "az":"Yenidən səni görməyimə sevindim!"
-    },
-    "34":{
-      "en":"Take care",
-      "az":"Özünə yaxşı bax"
-    },
-    "35":{
-      "en":"Later",
-      "az":"Sonra görüşərik"
-    },
-    "36":{
-      "en":"Alright, I gotta go. Peace out!",
-      "az":"Yaxşı, getməliyəm. Görüşənədək!"
-    },
-    "37":{
-      "en":"See you! Take it easy!",
-      "az":"Görüşənədək! Özünü yorma/rahat ol!"
-    },
-    "38":{
-      "en":"Have a great day!",
-      "az":"Gününüz xoş keçsin!"
-    },
-    "39":{
-      "en":"Keep in touch",
-      "az":"Əlaqədə qalaq"
-    },
-    "40":{
-      "en":"Bye! Have a good one!",
-      "az":"Sağol! Günün yaxşı keçsin!"
-    },
-    "41":{
-      "en":"Have a great night",
-      "az":"Gecən xeyrə qalsın"
-    },
-    "42":{
-      "en":"Catch you later",
-      "az":"Sonra görüşərik"
-    },
-    "43":{
-      "en":"Hurry back!",
-      "az":"Tez qayıt!"
-    },
-    "44":{
-      "en":"Gotta go!",
-      "az":"Getməliyəm!"
-    },
-    "45":{
-      "en":"How old are you Jack?",
-      "az":"Neçə yaşın var Jack?"
-    },
-    "46":{
-      "en":"I am 30 years old.",
-      "az":"30 yaşım var."
-    },
-    "47":{
-      "en":"I'm 27.",
-      "az":"27 yaşım var."
-    },
-    "48":{
-      "en":"Where are you from ?",
-      "az":"Haralısan ?"
-    },
-    "49":{
-      "en":"I am from Azerbaijan, and you ?",
-      "az":"Azərbaycandanam, bəs sən ?"
-    },
-    "50":{
-      "en":"Where do you come from ?",
-      "az":"Haralısan ?"
-    },
-    "51":{
-      "en":"I come from Azerbaijan.",
-      "az":"Mən Azərbaycandanam."
-    },
-    "52":{
-      "en":"I live in Toronto. It's a great city.",
-      "az":"Torontoda yaşayıram. Gözəl şəhərdir."
-    },
-    "53":{
-      "en":"Now, I have to go...",
-      "az":"İndi getməliyəm..."
-    },
-    "54":{
-      "en":"Thank you very much!",
-      "az":"Çox təşəkkür edirəm!"
-    },
-    "55":{
-      "en":"Thanks!",
-      "az":"Təşəkkürlər!"
-    },
-    "56":{
-      "en":"Thanks a lot!",
-      "az":"Çox Təşəkkürlər!"
-    },
-    "57":{
-      "en":"You are welcome!",
-      "az":"Dəyməz!"
-    },
-    "58":{
-      "en":"Please!",
-      "az":"Xahiş edirəm!"
-    },
-    "59":{
-      "en":"Excuse me!",
-      "az":"Bağışlayın!"
-    }
-  }
-}
+[
+  {"id": 1, "en":"Hello", "az":"Salam"},
+  {"id": 2, "en":"Hi", "az":"Salam"},
+  {"id": 3, "en":"Good morning", "az":"Sabahınız xeyir"},
+  {"id": 4, "en":"Good afternoon", "az":"Günortanız xeyir"},
+  {"id": 5, "en":"Good evening", "az":"Axşamınız xeyir"},
+  {"id": 6, "en":"Good night", "az":"Gecən xeyir"},
+  {"id": 7, "en":"Goodbye", "az":"Gülə-gülə"},
+  {"id": 8, "en":"Bye", "az":"Sağol"},
+  {"id": 9, "en":"See you later", "az":"Görüşərik"},
+  {"id": 10, "en":"See you tomorrow", "az":"Sabah görüşərik"},
+  {"id": 11, "en":"See you soon", "az":"Tezliklə görüşərik"},
+  {"id": 12, "en":"How are you ?", "az":"Necəsən ?"},
+  {"id": 13, "en":"I am fine, thank you!", "az":"Yaxşıyam, təşəkkürlər!"},
+  {"id": 14, "en":"I am good, thank you!", "az":"Yaxşıyam, təşəkkürlər!"},
+  {"id": 15, "en":"I am OK, thank you!", "az":"Yaxşıyam, təşəkkürlər!"},
+  {"id": 16, "en":"I am all right, thank you!", "az":"Yaxşıyam, təşəkkürlər!"},
+  {"id": 17, "en":"Thank you", "az":"Təşəkkürlər"},
+  {"id": 18, "en":"I am very good", "az":"Çox yaxşıyam"},
+  {"id": 19, "en":"I am not fine", "az":"Yaxşı deyiləm"},
+  {"id": 20, "en":"I am not good", "az":"Yaxşı deyiləm"},
+  {"id": 21, "en":"I am bad", "az":"Pisəm"},
+  {"id": 22, "en":"What about you?", "az":"Sən necəsən?"},
+  {"id": 23, "en":"What about yourself?", "az":"Sən necəsən?"},
+  {"id": 24, "en":"I am fine, too.", "az":"Mən də yaxşıyam."},
+  {"id": 25, "en":"I am bad, too.", "az":"Mən də pisəm."},
+  {"id": 26, "en":"Hi there!", "az":"Salam!"},
+  {"id": 27, "en":"Nice to see you!", "az":"Səni görməyimə şadam!"},
+  {"id": 28, "en":"Hey, what's up?", "az":"Hey, necəsən?"},
+  {"id": 29, "en":"How is it going?", "az":"Necə gedir ?"},
+  {"id": 30, "en":"What's new?", "az":"Təzə nə var?"},
+  {"id": 31, "en":"What have you been up to?", "az":"Nə ilə məşğulsan?"},
+  {"id": 32, "en":"How are you doing?", "az":"Necəsən ?"},
+  {"id": 33, "en":"Nice to see you again!", "az":"Yenidən səni görməyimə sevindim!"},
+  {"id": 34, "en":"Take care", "az":"Özünə yaxşı bax"},
+  {"id": 35, "en":"Later", "az":"Sonra görüşərik"},
+  {"id": 36, "en":"Alright, I gotta go. Peace out!", "az":"Yaxşı, getməliyəm. Görüşənədək!"},
+  {"id": 37, "en":"See you! Take it easy!", "az":"Görüşənədək! Özünü yorma/rahat ol!"},
+  {"id": 38, "en":"Have a great day!", "az":"Gününüz xoş keçsin!"},
+  {"id": 39, "en":"Keep in touch", "az":"Əlaqədə qalaq"},
+  {"id": 40, "en":"Bye! Have a good one!", "az":"Sağol! Günün yaxşı keçsin!"},
+  {"id": 41, "en":"Have a great night", "az":"Gecən xeyrə qalsın"},
+  {"id": 42, "en":"Catch you later", "az":"Sonra görüşərik"},
+  {"id": 43, "en":"Hurry back!", "az":"Tez qayıt!"},
+  {"id": 44, "en":"Gotta go!", "az":"Getməliyəm!"},
+  {"id": 45, "en":"How old are you Jack?", "az":"Neçə yaşın var Jack?"},
+  {"id": 46, "en":"I am 30 years old.", "az":"30 yaşım var."},
+  {"id": 47, "en":"I'm 27.", "az":"27 yaşım var."},
+  {"id": 48, "en":"Where are you from ?", "az":"Haralısan ?"},
+  {"id": 49, "en":"I am from Azerbaijan, and you ?", "az":"Azərbaycandanam, bəs sən ?"},
+  {"id": 50, "en":"Where do you come from ?", "az":"Haralısan ?"},
+  {"id": 51, "en":"I come from Azerbaijan.", "az":"Mən Azərbaycandanam."},
+  {"id": 52, "en":"I live in Toronto. It's a great city.", "az":"Torontoda yaşayıram. Gözəl şəhərdir."},
+  {"id": 53, "en":"Now, I have to go...", "az":"İndi getməliyəm..."},
+  {"id": 54, "en":"Thank you very much!", "az":"Çox təşəkkür edirəm!"},
+  {"id": 55, "en":"Thanks!", "az":"Təşəkkürlər!"},
+  {"id": 56, "en":"Thanks a lot!", "az":"Çox Təşəkkürlər!"},
+  {"id": 57, "en":"You are welcome!", "az":"Dəyməz!"},
+  {"id": 58, "en":"Please!", "az":"Xahiş edirəm!"},
+  {"id": 59, "en":"Excuse me!", "az":"Bağışlayın!"}
+]

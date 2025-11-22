@@ -1,20 +1,18 @@
+from pydantic import BaseModel, Field
+from typing import Optional
+from datetime import datetime
 
-    # __tablename__ = "users"
 
-    # id = Column(Integer, primary_key=True)
-    # tg_id = Column(BigInteger, unique=True, nullable=False)
+class User(BaseModel):
+    id: int
+    tg_id: int
+    is_bot: bool
+    first_name: str
+    last_name: Optional[str] = None
+    username: Optional[str] = None
+    language_code: Optional[str] = None
+    is_premium: Optional[bool] = False
+    added_at: datetime = Field(default_factory=datetime.utcnow)
 
-    # username = Column(String(255), nullable=True)
-    # email = Column(String(255), nullable=True)
-    
-    # first_name = Column(String(255), nullable=True)
-    # last_name = Column(String(255), nullable=True)
-
-    # language_code = Column(String(10), nullable=True)
-
-    # is_bot = Column(Boolean, default=False)
-    
-    # level = Column(Integer, default=1)
-    # score = Column(Integer, default=0)
-    
-    # created_at = Column(DateTime(timezone=True), server_default=func.now())
+    level: int = 1
+    score: int = 0
